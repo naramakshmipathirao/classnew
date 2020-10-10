@@ -1,0 +1,86 @@
+
+
+1
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0"
+2
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+3
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+4
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+5
+    &lt;groupId&gt;com.dzone.albanoj2.maven.java&lt;/groupId&gt;
+6
+    &lt;artifactId&gt;adder&lt;/artifactId&gt;
+7
+    &lt;version&gt;1.0.0&lt;/version&gt;
+8
+​
+9
+    &lt;properties&gt;
+10
+        &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+11
+        &lt;project.reporting.outputEncoding&gt;UTF-8&lt;/project.reporting.outputEncoding&gt;
+12
+        &lt;maven.compiler.source&gt;11&lt;/maven.compiler.source&gt;
+13
+        &lt;maven.compiler.target&gt;11&lt;/maven.compiler.target&gt;
+14
+        &lt;junit.version&gt;5.5.2&lt;/junit.version&gt;
+15
+    &lt;/properties&gt;
+16
+​
+17
+    &lt;dependencies&gt;
+18
+        &lt;dependency&gt;
+19
+            &lt;groupId&gt;org.junit.jupiter&lt;/groupId&gt;
+20
+            &lt;artifactId&gt;junit-jupiter-engine&lt;/artifactId&gt;
+21
+            &lt;version&gt;${junit.version}&lt;/version&gt;
+22
+            &lt;scope&gt;test&lt;/scope&gt;
+23
+        &lt;/dependency&gt;
+24
+    &lt;/dependencies&gt;
+25
+​
+26
+    &lt;build&gt;
+27
+        &lt;plugins&gt;
+28
+            &lt;plugin&gt;
+29
+                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+30
+                &lt;artifactId&gt;maven-jar-plugin&lt;/artifactId&gt;
+31
+                &lt;configuration&gt;
+32
+                    &lt;archive&gt;
+33
+                        &lt;manifest&gt;
+34
+                            &lt;addClasspath&gt;true&lt;/addClasspath&gt;
+35
+                            &lt;mainClass&gt;com.dzone.albanoj2.maven.java.Application&lt;/mainClass&gt;
+36
+                        &lt;/manifest&gt;
+37
+                    &lt;/archive&gt;
+38
+                &lt;/configuration&gt;
+39
+            &lt;/plugin&gt;
+40
+        &lt;/plugins&gt;
+41
+    &lt;/build&gt;
+42
+&lt;/project&gt;
